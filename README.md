@@ -31,18 +31,29 @@ http.xhr(`method`,`url`,`params`,`options`)
     It won't go through the server again within the next xx minutes
     - key `optional`
     > Specify your key;
-#### Instance
+#### Simple Instance
 ```js
 import {CacheAjax} from 'cache-ajax';
 window['myHttp']=new CacheHttp();
 
-myHttp.xhr('get','http://localhost:3000/get',{name:1})
-
-myHttp.xhr('post','http://localhost:3000/get',{name:1},{
+myHttp
+.xhr('get','http://localhost:3000/get',{name:1})
+.subscribe(
+    result=>console.log(result),
+    err=>console.log(err)
+)
+```
+#### Advance example:
+```js
+const sub=myHttp.xhr('post','http://localhost:3000/get',{name:1},{
   headers:{storeCode:1},
   expires:.5
 })
+let order;
+const click=()=>order=sub.subscribe(result=>console.log(result));
+const cancel=()=>order.unsubscribe();
 ```
+
 Queue optimization:
 ---
 If your request takes 5 seconds,you have to disabled `button ` during this times.
