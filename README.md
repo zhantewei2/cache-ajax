@@ -1,3 +1,5 @@
+<h1 style="text-align:center">cache-ajax</center>
+
 Install:
 ---
         npm install cache-ajax --save
@@ -7,7 +9,7 @@ API:
 #### CacheAjax
 CacheAjax(
     {`_expires`?,`limit`?,`skip`?}={},
-    filter?:Function<any>
+    `filter?:Function<any>`
 )
         
         const http=new CacheAjax({_expires:5},result=>JSON.parse(result.content));
@@ -54,7 +56,7 @@ const sub=myHttp.xhr('post','http://localhost:3000/get',{name:1},{
 })
 let order;
 const click=()=>order=sub.subscribe(result=>console.log(result));
-const cancel=()=>order.unsubscribe();
+const cancel=()=>order&&order.unsubscribe();
 ```
 
 Queue optimization:
