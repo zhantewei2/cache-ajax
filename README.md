@@ -31,7 +31,9 @@ http.xhr(`method`,`url`,`params`,`options`)
     It won't go through the server again within the next xx minutes
     - key `optional`
     > Specify your key;
-#### Simple Instance
+    
+Simple Instance
+---
 ```js
 import {CacheAjax} from 'cache-ajax';
 window['myHttp']=new CacheHttp();
@@ -43,7 +45,8 @@ myHttp
     err=>console.log(err)
 )
 ```
-#### Advance example:
+Advance example:
+---
 ```js
 const sub=myHttp.xhr('post','http://localhost:3000/get',{name:1},{
   headers:{storeCode:1},
