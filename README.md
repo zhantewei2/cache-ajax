@@ -17,7 +17,7 @@ CacheAjax(
 - _expires Specify glob expires times`(default 0)` `optional`
 - limit capped collection max count`(default 100)` `optional`
 - skip `(default 10)` `optional`
-- filter
+- filter `optional`
     >glob filter request result
 
 
@@ -47,7 +47,7 @@ myHttp
     err=>console.log(err)
 )
 ```
-Advance example:
+Advance Instance:
 ---
 ```js
 const sub=myHttp.xhr('post','http://localhost:3000/get',{name:1},{
