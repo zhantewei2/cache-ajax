@@ -1,0 +1,20 @@
+{
+  "name": "cache-ajax",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cacheHttp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cache",
+    "ajax",
+    "xhr",
+    "xmlhttprequest"
+  ],
+  "author": "zhantewei",
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^5.5.6"
+  }
+}
