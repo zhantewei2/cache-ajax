@@ -37,7 +37,7 @@ http.xhr(`method`,`url`,`params`,`options`)
 Simple Instance
 ---
 ```js
-import {CacheAjax} from 'cache-ajax';
+import {CacheHttp} from 'cache-ajax';
 window['myHttp']=new CacheHttp();
 
 myHttp
