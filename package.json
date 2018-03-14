@@ -1,23 +1,51 @@
 {
-  "name": "cache-ajax",
-  "version": "1.0.2",
-  "description": "",
-  "main": "cacheHttp.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      "cache-ajax@1.0.4",
+      "D:\\react\\1"
+    ]
+  ],
+  "_from": "cache-ajax@1.0.3",
+  "_id": "cache-ajax@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-ag0pV0nWmSb9QnEiEPvuZZt9NkM=",
+  "_location": "/cache-ajax",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "cache-ajax@1.0.3",
+    "name": "cache-ajax",
+    "escapedName": "cache-ajax",
+    "rawSpec": "1.0.3",
+    "saveSpec": null,
+    "fetchSpec": "1.0.3"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/cache-ajax/download/cache-ajax-1.0.3.tgz",
+  "_spec": "1.0.3",
+  "_where": "D:\\react\\1",
+  "author": {
+    "name": "zhantewei"
+  },
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "rxjs": "^5.5.6"
+  },
+  "description": "<h1 style=\"text-align:center\">cache-ajax</center>",
   "keywords": [
     "cache",
     "ajax",
     "xhr",
     "xmlhttprequest"
   ],
-  "repository":{
-    "git":"https://github.com/zhantewei2/cache-ajax"
-  },
-  "author": "zhantewei",
   "license": "ISC",
-  "dependencies": {
-    "rxjs": "^5.5.6"
-  }
+  "main": "dist/cacheHttp.js",
+  "name": "cache-ajax",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.3"
 }
