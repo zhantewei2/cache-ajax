@@ -14,8 +14,9 @@ export class httpBase{
     const xhr=new XMLHttpRequest();
     this.send=(method,address,params,headers={})=> {
       method=method.toLowerCase();
-      let query,sendQuery='';
-      if(params)query=queryStringify(params);
+      let sendQuery='';
+      if(params&&method==='get')address=address+'?'+queryStringify(params)
+      
       return Observable.create((ob) => {
         xhr.onreadystatechange = () => {
           if(xhr.readyState===4){
@@ -26,11 +27,9 @@ export class httpBase{
             ob.next({status:xhr.status,content:xhr.responseText})
           }
         };
-        if(method==='get'){
-          if(query)address+='?'+query;
-        }else{
-          sendQuery=query;
-          headers=Object.assign({'Content-type':'application/x-www-form-urlencoded'},headers)
+        if(method!=='get'){
+          sendQuery=(params instanceof Object)?JSON.stringify(params):(params||'');
+          headers=Object.assign({'Content-type':'application/json'},headers)
         }
         //unsubscribe abort xhr:
         const old=ob.unsubscribe;

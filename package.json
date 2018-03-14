@@ -1,6 +1,6 @@
 {
   "name": "cache-ajax",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "cacheHttp.js",
   "scripts": {
@@ -12,6 +12,9 @@
     "xhr",
     "xmlhttprequest"
   ],
+  "repository":{
+    "git":"https://github.com/zhantewei2/cache-ajax"
+  },
   "author": "zhantewei",
   "license": "ISC",
   "dependencies": {
